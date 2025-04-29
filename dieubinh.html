@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CẢNH BÁO NGUY HIỂM!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #ff0000;
+            text-align: center;
+            padding: 50px;
+        }
+        .warning-box {
+            background-color: #1a0000;
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px #ff0000;
+        }
+        .warning-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .warning-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #ff0000;
+        }
+        .warning-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .danger-button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .danger-button:hover {
+            background-color: #cc0000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-box">
+        <div class="warning-icon">⚠️</div>
+        <div class="warning-title">CẢNH BÁO KHẨN CẤP!</div>
+        <div class="warning-message">
+            <p>VỊ TRÍ CỦA BẠN ĐÃ BỊ PHÁT HIỆN!</p>
+            <p>Nguy cơ rò rỉ thông tin cá nhân <strong>RẤT CAO!</strong></p>
+            <p>Hệ thống đã ghi nhận hoạt động đáng ngờ từ thiết bị của bạn.</p>
+        </div>
+        <button class="danger-button" onclick="showMoreDanger()">XEM CHI TIẾT NGUY HIỂM</button>
+    </div>
+
+    <script>
+        function showMoreDanger() {
+            alert("⚠️ CẢNH BÁO NÂNG CAO ⚠️\n\nHacker đang truy cập vào vị trí của bạn!\nIP: [127.0.0.1]\nTọa độ: [Đang theo dõi...]\n\nHãy ngắt kết nối ngay lập tức!");
+            document.body.style.background = "linear-gradient(45deg, #ff0000, #000000)";
+            document.querySelector(".warning-box").style.boxShadow = "0 0 30px #ff0000";
+        }
+    </script>
+</body>
+</html>
